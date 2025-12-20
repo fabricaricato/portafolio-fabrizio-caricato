@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section id="about-me" className="short-personal-presentation">
+    <section id="section-home" className="short-personal-presentation">
       <h1 className="name-title">Fabrizio Caricato</h1>
       <div className="short-description-container">
         <h2 className="short-description">Programación de sistemas y desarrollo web fullstack</h2>

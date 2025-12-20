@@ -8,8 +8,8 @@ const Skills = () => {
   ];
 
   return (
-    <section>
-      <h2 id="skills">Habilidades</h2>
+    <section id="section-skills"className="skills">
+      <h2>Habilidades</h2>
       <div className="skills-icons">
         {skills.map((skillClass, index) => (
           <i key={index} className={skillClass}></i>

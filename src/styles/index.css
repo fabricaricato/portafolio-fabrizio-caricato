@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-wrap: wrap;
@@ -19,9 +23,6 @@ body {
 
 main {
   background-color: #020138;
-}
-
-main, footer{
   margin-left: 200px;
 }
 
@@ -53,7 +54,7 @@ a {
   color: black;
 }
 
-section, a{
+section, a, footer{
   color: white;
 }
 
@@ -89,17 +90,16 @@ section a {
   text-decoration: none;
 }
 
-.short-personal-presentation {
+.short-personal-presentation, .skills, .education, .projects, .about, .contacts {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-}
+} 
 
 .short-description {
   font-size: 27px;
 }
-
 .contact-me {
   color: var(--fonts-color);
 }

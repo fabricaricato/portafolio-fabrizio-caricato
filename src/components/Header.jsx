@@ -4,11 +4,12 @@ const Header = () => {
       <aside>
         <nav>
           <ul>
-            <li><a href="#about-me">Sobre mí</a></li>
-            <li><a href="#education">Educación</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#proyects">Proyectos</a></li>
-            <li><a href="#contacts">Contactos</a></li>
+            <li><a href="#section-home">Inicio</a></li>
+            <li><a href="#section-about-me">Sobre mí</a></li>
+            <li><a href="#section-education">Educación</a></li>
+            <li><a href="#section-skills">Habilidades</a></li>
+            <li><a href="#section-projects">Proyectos</a></li>
+            <li><a href="#section-contacts">Contactos</a></li>
           </ul>
         </nav>
       </aside>

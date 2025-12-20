@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
     <>
-      <section>
-        <h2 id="contacts">Contacto</h2>
+      <section id="section-contacts" className="contacts">
+        <h2>Contacto</h2>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/fabrizio" target="_blank" rel="noopener noreferrer">linkedin.com/in/fabrizio</a></p>
         <p>GitHub: <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer">github.com/tuusuario</a></p>
       </section>

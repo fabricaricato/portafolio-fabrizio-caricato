@@ -5,12 +5,11 @@ const Projects = () => {
       description: "Simple interfaz de un chat funcional entre dos personas.",
       tech: "HTML, CSS y JavaScript"
     }
-    // Puedes agregar más objetos aquí
   ];
 
   return (
-    <section>
-      <h2 id="proyects">Proyectos</h2>
+    <section id="section-projects" className="projects">
+      <h2>Proyectos</h2>
       {projectList.map((project, index) => (
         <div key={index}>
           <h3>{project.title}</h3>
