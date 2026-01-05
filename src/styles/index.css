@@ -29,7 +29,6 @@ body {
   background-color: var(--primary-bg);
   color: var(--text-color);
   font-family: "Nunito", sans-serif;
-  line-height: 1.6;
   font-optical-sizing: auto;
 }
 
@@ -137,7 +136,7 @@ nav a:hover {
 }
 
 .name-title {
-  font-size: 4.5rem;
+  font-size: 72px;
   color: var(--accent-color);
   line-height: 1.1;
   font-weight: 800;
@@ -149,9 +148,48 @@ nav a:hover {
 }
 
 .short-description {
-  font-size: 1.8rem;
+  font-size: 28.8px;
   color: var(--text-muted);
-  margin-bottom: 20px;
+  border-bottom: transparent;
+}
+
+.description-typewriter{
+  display: flex;
+  justify-content: center;
+}
+
+.description-typewriter .short-description {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  position: relative; 
+  animation: typing 3.5s steps(40, end);
+  width: 41ch;
+}
+
+.description-typewriter .short-description::after{
+  content: ''; 
+  position: absolute;
+  right: 0; 
+  height: 70%; 
+  top: 42%;
+  transform: translateY(-50%);
+  width: 1px; 
+  animation: blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 41ch; }
+}
+
+@keyframes blink-caret {
+  from, to { 
+    background-color: transparent;
+  }
+  50% { 
+    background-color: rgb(255, 255, 255);
+  }
 }
 
 .contact-me {

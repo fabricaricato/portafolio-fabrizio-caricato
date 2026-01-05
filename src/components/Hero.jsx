@@ -6,7 +6,9 @@ const Hero = () => {
       <img className="image-presentation" src={fotoCarnet} alt="foto-carnet" />
       <h1 className="name-title">Fabrizio Caricato</h1>
       <div className="short-description-container">
-        <h2 className="short-description">Programación de sistemas y desarrollo web fullstack</h2>
+        <div className="description-typewriter">
+          <h2 className="short-description">Programación de sistemas y desarrollo web fullstack</h2>
+        </div>
         <p>
           Contactate conmigo :) {`=>`} <a className="contact-me" href="mailto:fabriziocaricato1@gmail.com">fabriziocaricato1@gmail.com</a>
         </p>
