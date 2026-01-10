@@ -193,11 +193,6 @@ nav a:hover {
   margin-top: 15px;
 }
 
-.social-icons {
-  display: flex;
-  gap: 15px;
-}
-
 
 .social-icons a {
   display: flex;
