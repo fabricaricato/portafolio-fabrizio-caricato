@@ -19,6 +19,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size : 12px; 
 }
 
 html {
@@ -27,9 +31,7 @@ html {
 
 body {
   background-color: var(--primary-bg);
-  color: var(--text-color);
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
+  color: var(--text-color); 
 }
 
 /* =========================================
@@ -120,23 +122,8 @@ nav a:hover {
   align-items: flex-start;
 }
 
-.image-presentation {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--accent-color);
-  box-shadow: 0 0 25px rgba(39, 230, 236, 0.4);
-  margin-bottom: 30px;
-  transition: var(--transition);
-}
-
-.image-presentation:hover {
-  transform: scale(1.05);
-}
-
 .name-title {
-  font-size: 72px;
+  font-size: 60px;
   color: var(--accent-color);
   line-height: 1.1;
   font-weight: 800;
@@ -144,11 +131,12 @@ nav a:hover {
 }
 
 .short-description-container {
-  max-width: 800px;
+  max-width: auto;
+  margin-top: 3px;
 }
 
 .short-description {
-  font-size: 28.8px;
+  font-size: 20px;
   color: var(--text-muted);
   border-bottom: transparent;
 }
@@ -202,8 +190,14 @@ nav a:hover {
 .social-icons {
   display: flex;
   gap: 15px;
-  margin-top: 25px;
+  margin-top: 15px;
 }
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
 
 .social-icons a {
   display: flex;
@@ -214,18 +208,23 @@ nav a:hover {
   border-radius: 50%;
   background-color: white;
   color: var(--primary-bg);
-  font-size: 1.5rem;
   transition: var(--transition);
   cursor: pointer;
   text-decoration: none;
 }
+
+.social-icons i {
+  font-size: 25px;
+}
+
 
 .social-icons a:hover {
   background-color: var(--accent-color);
   color: white;
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(39, 230, 236, 0.5);
-}
+} 
+
 
 /* =========================================
   5. COMPONENTES: PROYECTOS (CARDS)
