@@ -11,6 +11,10 @@
   padding: 0;
   text-decoration: none;
   color: var(--text-color);
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 html {
@@ -69,10 +73,6 @@ ul li a:hover{
   background-color: var(--background-color-home);
 }
 
-.name {
-  color: #ffff82;
-}
-
 .section-home {
   display: flex;
   flex-direction: column;
@@ -83,10 +83,15 @@ ul li a:hover{
   margin-top: 50px;
 }
 
-.section-home h1 {
+.section-home h1, .name{
   line-height: 1.2;      
   margin-bottom: 20px;   
   color: white;
+  font-weight: 500;
+}
+
+.name {
+  color: #ffff82;
 }
 
 .section-home p {
