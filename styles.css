@@ -1,6 +1,7 @@
 :root{
-  --background-color-home: #383838;
-  --background-color-website: #2e2e2e;
+  --background-color-home: #303030;
+  --background-color-website: #242424;
+  --hover-text: #696969;; 
   --text-color: #acacac;
 }
 
@@ -10,6 +11,10 @@
   padding: 0;
   text-decoration: none;
   color: var(--text-color);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* --- SECCIÓN HEADER --- */
@@ -34,8 +39,18 @@ main, footer{
 
 ul {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   list-style: none;
+}
+
+ul li a{
+  transition: all 0.3s ease;
+}
+
+ul li a:hover{
+  color: var(--hover-text);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .profile-container {
@@ -54,21 +69,53 @@ ul {
   background-color: var(--background-color-home);
 }
 
+.name {
+  color: #ffff82;
+}
+
 .section-home {
   display: flex;
   flex-direction: column;
   justify-content: center; 
   align-items: center;     
-  text-align: center;      
+  text-align: center;
+  font-size: 50px;
+  margin-top: 50px;
 }
 
 .section-home h1 {
-  font-size: 48px;      
   line-height: 1.2;      
   margin-bottom: 20px;   
+  color: white;
 }
 
 .section-home p {
   font-size: 24px;     
-  color: #27e6ec;       
+}
+
+.section-home a {
+  display: inline-block;
+  padding: 12px 30px;
+  margin-top: 30px;
+  color: #27e6ec; 
+  border: 2px solid #27e6ec;
+  background-color: transparent;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.section-home a:hover {
+  background-color: #27e6ec;
+  color: #0a0a0a; 
+  box-shadow: 0 0 20px rgba(39, 230, 236, 0.4); 
+  transform: translateY(-3px); 
+}
+
+.section-home a:active {
+  transform: translateY(-1px);
 }
