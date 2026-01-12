@@ -2,7 +2,7 @@
   --background-color-home: #303030;
   --background-color-website: #242424;
   --hover-text: #696969;; 
-  --text-color: #acacac;
+  --text-color: #ffffff;
 }
 
 * {
@@ -21,7 +21,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* --- SECCIÓN HEADER --- */
+/* --- HEADER SECTION --- */
 
 nav {
   position: fixed; 
@@ -63,7 +63,7 @@ ul li a:hover{
   gap: 5px;
 }
 
-/* --- SECCIÓN HOME --- */
+/* --- HOME SECTION --- */
 
 .home {
   display: flex;
@@ -95,7 +95,8 @@ ul li a:hover{
 }
 
 .home-section p {
-  font-size: 24px;     
+  font-size: 24px;   
+  color: #acacac;  
 }
 
 .home-section a {
@@ -125,23 +126,23 @@ ul li a:hover{
   transform: translateY(-1px);
 }
 
-/* --- KEYFRAMES */
+/* --- KEYFRAMES --- */
 
-@keyframes entradaSuave {
+@keyframes smoothEntry {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 .home-section {
-  animation: entradaSuave 1.2s ease-out forwards;
+  animation: smoothEntry 1.2s ease-out forwards;
 }
 
-@keyframes pulso {
+@keyframes pulse {
   0% { box-shadow: 0 0 0 0 rgba(39, 230, 236, 0.7); }
   70% { box-shadow: 0 0 0 10px rgba(39, 230, 236, 0); }
   100% { box-shadow: 0 0 0 0 rgba(39, 230, 236, 0); }
 }
 
 .download-cv {
-  animation: pulso 2s infinite;
+  animation: pulse 2s infinite;
 }
