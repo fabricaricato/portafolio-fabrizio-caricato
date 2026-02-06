@@ -1,20 +1,16 @@
 :root {
-  /* colores de fondo */
+  /* background colors */
   --bg-home: #303030;
   --bg-website: #242424;
   
-  /* colores de acento */
+  /* accent colors */
   --accent-cyan: #27e6ec; 
   --accent-yellow: #ffff82;
   --accent-blue: #1379c2;
 
-  /* textos secundarios */  
+  /* secondary texts */  
   --text-main: #ffffff;
   --text-muted: #acacac; 
-
-  /* ancho de secciones
-  --section-width: width: 90%;
-  max-width: 1100px */
 }
 
 * {
@@ -37,6 +33,30 @@ html {
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
+}
+
+/* --- TITLES --- */
+
+.about-me-title, .education-title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.education-title {
+  margin-left: 21px;
+}
+
+.about-me-title h4, .education-title h4 {
+  color: var(--accent-cyan);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-me-title h2, .education-title h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
 }
 
 /* --- HEADER SECTION --- */
@@ -204,21 +224,21 @@ ul li a:hover {
   gap: 5px;               
 }
 
-.anchor-about-me a, .anchor-projects a {
+.anchor-about-me a, .anchor-education a {
   color: var(--text-muted);
   font-size: 0.9rem;
   transition: color 0.3s ease;
 }
 
-.anchor-about-me i, .anchor-projects i{
+.anchor-about-me i, .anchor-education i{
   color: var(--text-muted);
   transition: color 0.3s ease;
 }
 
 .anchor-about-me:hover a,
 .anchor-about-me:hover i, 
-.anchor-projects:hover a,
-.anchor-projects:hover i {
+.anchor-education:hover a,
+.anchor-education:hover i {
   color: var(--accent-cyan);
 }
 
@@ -238,24 +258,6 @@ ul li a:hover {
   display: flex;
   flex-direction: column;
   gap: 30px;
-}
-
-.about-me-title, .projects-title {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.about-me-title h4, .projects-title h4 {
-  color: var(--accent-cyan);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.about-me-title h2 {
-  font-size: 2.5rem;
-  font-weight: 500;
 }
 
 .general-description {
@@ -295,7 +297,7 @@ ul li a:hover {
   cursor: pointer;
 }
 
-.anchor-projects {
+.anchor-education {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -307,30 +309,89 @@ ul li a:hover {
   cursor: pointer;
 }
 
-.anchor-projects:hover i, .anchor-projects:hover a {
+.anchor-education:hover i, .anchor-education:hover a {
   color: var(--accent-cyan);
 }
 
-/* --- PROJECTS SECTION --- */
-
-.projects {
+/* --- EDUCATION SECTION  --- */
+.education {
+  padding: 50px 0;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  min-height: 100vh;
 }
 
-.projects-grid {
-  border: #1379c2 2px solid;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 20px;
+.education-title {
+  margin-bottom: 20px
 }
 
-.card {
-  border: #c21313 2px solid;
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: var(--accent-cyan);
+  top: 0;
+  bottom: 0;
+  left: 20px; 
+  margin-left: -1px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 50px; 
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 11px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-home);
+  border: 2px solid var(--accent-cyan);
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(39, 230, 236, 0.5);
+}
+
+.timeline-content {
+  background-color: var(--bg-home);
+  padding: 20px 30px;
+  border-radius: 12px;
+  border-left: 4px solid var(--accent-cyan); 
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateX(10px);
+}
+
+.timeline-content .date {
+  font-size: 14px;
+  color: var(--accent-cyan);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.timeline-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.timeline-content .institution {
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 10px;
 }
 
 /* --- KEYFRAMES --- */
@@ -360,6 +421,6 @@ ul li a:hover {
   60% { transform: translateY(-5px); }  
 }
 
-.anchor-about-me i, .anchor-projects i {
+.anchor-about-me i, .anchor-education i {
   animation: rebound 2s infinite;
 }
