@@ -69,12 +69,12 @@ nav {
   border: 2px solid var(--accent-cyan);
   background-color: transparent;
   border-radius: 50px;
-  text-decoration: none;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
   cursor: pointer;
+  animation: pulse 2s infinite;
 }
 
 .download-cv:hover {
@@ -155,6 +155,7 @@ ul li a:hover {
   text-align: center;
   font-size: 50px;
   margin-top: 50px;
+  animation: smoothEntry 1.2s ease-out forwards;
 }
 
 .home-section h1,
@@ -188,12 +189,10 @@ ul li a:hover {
 .github-link,
 .linkedin-link {
   width: 150px;
-  padding: 10px 0px;
+  padding: 10px 0;
   text-align: center;
-  color: var(--text-main);
   background-color: var(--accent-blue);
   border-radius: 50px;
-  text-decoration: none;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -239,7 +238,6 @@ ul li a:hover {
 }
 
 .carrousel img {
-  border: none;
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -335,6 +333,132 @@ ul li a:hover {
   color: var(--text-muted);
   font-style: italic;
   margin-bottom: 10px;
+}
+
+/* --- CERTIFICATE STYLES --- */
+
+.certificate-preview {
+  position: relative;
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  max-width: 320px;
+  border: 2px solid rgba(39, 230, 236, 0.2);
+  transition: all 0.4s ease;
+}
+
+.certificate-preview:hover {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 25px rgba(39, 230, 236, 0.2);
+  transform: scale(1.02);
+}
+
+.certificate-preview img {
+  width: 100%;
+  display: block;
+  transition: filter 0.4s ease;
+}
+
+.certificate-preview:hover img {
+  filter: brightness(0.4);
+}
+
+.certificate-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.certificate-preview:hover .certificate-overlay {
+  opacity: 1;
+}
+
+.certificate-overlay i {
+  font-size: 2rem;
+  color: var(--accent-cyan);
+}
+
+.certificate-overlay span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* --- CERTIFICATE LIGHTBOX MODAL --- */
+
+.certificate-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.certificate-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.certificate-modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+  animation: modalZoomIn 0.4s ease forwards;
+}
+
+.certificate-modal-content img {
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(39, 230, 236, 0.15);
+  border: 2px solid rgba(39, 230, 236, 0.3);
+}
+
+.certificate-modal-close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  background: var(--bg-home);
+  border: 2px solid var(--accent-cyan);
+  border-radius: 50%;
+  color: var(--accent-cyan);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 2001;
+}
+
+.certificate-modal-close:hover {
+  background: var(--accent-cyan);
+  color: var(--bg-website);
+  box-shadow: 0 0 15px rgba(39, 230, 236, 0.5);
+  transform: rotate(90deg);
 }
 
 /* --- SKILLS SECTION --- */
@@ -447,7 +571,6 @@ ul li a:hover {
 
 .card h3 {
   font-size: 22px;
-  color: var(--text-main);
   margin-bottom: 10px;
 }
 
@@ -490,15 +613,13 @@ ul li a:hover {
 }
 
 .contact-box:hover {
-  border: 1px solid var(--accent-cyan);
-  transition: all 0.3s ease;
+  border-color: var(--accent-cyan);
   transform: translateY(-3px);
 }
 
 .contact-box h2 {
   font-size: 2.5rem;
   margin-bottom: 15px;
-  color: var(--text-main);
 }
 
 .contact-box p {
@@ -667,10 +788,6 @@ footer p:hover {
   }
 }
 
-.home-section {
-  animation: smoothEntry 1.2s ease-out forwards;
-}
-
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(39, 230, 236, 0.7);
@@ -683,10 +800,6 @@ footer p:hover {
   100% {
     box-shadow: 0 0 0 0 rgba(39, 230, 236, 0);
   }
-}
-
-.download-cv {
-  animation: pulse 2s infinite;
 }
 
 @keyframes rebound {
@@ -710,4 +823,16 @@ footer p:hover {
 
 .anchor i {
   animation: rebound 2s infinite;
+}
+
+@keyframes modalZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

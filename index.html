@@ -127,7 +127,24 @@
             <p class="institution">UTN - Universidad Tecnológica Nacional</p>
             <p class="description">Especialización en tecnologías como MongoDB, Express, Node.js, desarrollo nativo
               (HTML, CSS, JAVASCRIPT) y desarrollo moderno (React).</p>
+            <div class="certificate-preview"
+              onclick="document.getElementById('certificate-modal').classList.add('active')">
+              <img src="./assets/Curso_de_Programador_Web_Inicial_-_Front_End_Developer_-_Turno_Noche_page-0001.jpg"
+                alt="Certificado Programador Web Inicial - Front End Developer" />
+              <div class="certificate-overlay">
+                <i class="fa-solid fa-expand"></i>
+                <span>Ver certificado</span>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+      <div id="certificate-modal" class="certificate-modal" onclick="this.classList.remove('active')">
+        <div class="certificate-modal-content" onclick="event.stopPropagation()">
+          <button class="certificate-modal-close"
+            onclick="document.getElementById('certificate-modal').classList.remove('active')">&times;</button>
+          <img src="./assets/Curso_de_Programador_Web_Inicial_-_Front_End_Developer_-_Turno_Noche_page-0001.jpg"
+            alt="Certificado Programador Web Inicial - Front End Developer" />
         </div>
       </div>
       <div class="anchor">
@@ -296,4 +313,5 @@
     });
   </script>
 </body>
+
 </html>
