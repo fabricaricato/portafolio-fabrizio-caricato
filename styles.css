@@ -2,15 +2,15 @@
   /* background colors */
   --bg-home: #303030;
   --bg-website: #242424;
-  
+
   /* accent colors */
-  --accent-cyan: #27e6ec; 
+  --accent-cyan: #27e6ec;
   --accent-yellow: #ffff82;
   --accent-blue: #1379c2;
 
-  /* secondary texts */  
+  /* secondary texts */
   --text-main: #ffffff;
-  --text-muted: #acacac; 
+  --text-muted: #acacac;
 }
 
 /* --- GLOBAL --- */
@@ -37,16 +37,21 @@ html {
   margin: 0 auto;
 }
 
-.home, .about-me, .education, .skills, .projects, .contacts {
+.home,
+.about-me,
+.education,
+.skills,
+.projects,
+.contacts {
   min-height: 100vh;
 }
 
 /* --- HEADER SECTION --- */
 
 nav {
-  position: fixed; 
-  top: 0;         
-  left: 0;   
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 1000;
   display: flex;
@@ -54,13 +59,13 @@ nav {
   align-items: center;
   padding: 15px;
   background-color: var(--bg-website);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.download-cv{
+.download-cv {
   display: inline-block;
   padding: 9px 25px;
-  color: var(--accent-cyan); 
+  color: var(--accent-cyan);
   border: 2px solid var(--accent-cyan);
   background-color: transparent;
   border-radius: 50px;
@@ -72,14 +77,14 @@ nav {
   cursor: pointer;
 }
 
-.download-cv:hover{
+.download-cv:hover {
   background-color: var(--accent-cyan);
   color: var(--bg-website);
-  box-shadow: 0 0 20px rgba(39, 230, 236, 0.4); 
+  box-shadow: 0 0 20px rgba(39, 230, 236, 0.4);
   transform: translateY(-3px);
 }
 
-.download-cv:active{
+.download-cv:active {
   transform: translateY(-1px);
 }
 
@@ -87,7 +92,7 @@ body {
   padding-top: 70px;
 }
 
-main, footer {
+main {
   background-color: var(--bg-website);
 }
 
@@ -104,7 +109,7 @@ ul li a {
 }
 
 ul li a:hover {
-  color: var(--accent-cyan); 
+  color: var(--accent-cyan);
   cursor: pointer;
 
 }
@@ -115,12 +120,13 @@ ul li a:hover {
   gap: 10px;
 }
 
-.profile-container img, .carrousel img {
+.profile-container img,
+.carrousel img {
   border-radius: 50%;
   width: 40px;
   height: 40px;
   object-fit: cover;
-  border: 2px solid var(--accent-cyan); 
+  border: 2px solid var(--accent-cyan);
 }
 
 .profile-container p span {
@@ -138,22 +144,23 @@ ul li a:hover {
   align-items: center;
   flex-direction: column;
   background-color: var(--bg-home);
-  margin-top: -70px; 
+  margin-top: -70px;
 }
 
 .home-section {
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center;     
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-size: 50px;
   margin-top: 50px;
 }
 
-.home-section h1, .name {
-  line-height: 1.2;      
-  margin-bottom: 20px;   
+.home-section h1,
+.name {
+  line-height: 1.2;
+  margin-bottom: 20px;
   color: var(--text-main);
   font-weight: 500;
 }
@@ -163,7 +170,7 @@ ul li a:hover {
 }
 
 .home-section p {
-  font-size: 24px;   
+  font-size: 24px;
   color: var(--text-muted);
 }
 
@@ -178,11 +185,12 @@ ul li a:hover {
   margin-top: 35px;
 }
 
-.github-link, .linkedin-link {
+.github-link,
+.linkedin-link {
   width: 150px;
   padding: 10px 0px;
   text-align: center;
-  color: var(--text-main); 
+  color: var(--text-main);
   background-color: var(--accent-blue);
   border-radius: 50px;
   text-decoration: none;
@@ -221,13 +229,13 @@ ul li a:hover {
   text-align: justify;
   color: var(--text-muted);
   line-height: 1.6;
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
 
 .carrousel {
   display: flex;
-  justify-content: center; 
-  position: relative; 
+  justify-content: center;
+  position: relative;
 }
 
 .carrousel img {
@@ -238,11 +246,11 @@ ul li a:hover {
   object-fit: cover;
   border: 2px solid var(--accent-cyan);
   position: relative;
-  bottom: 75px; 
+  bottom: 75px;
   transition: transform 0.6s ease;
 }
 
-.carrousel img:hover{
+.carrousel img:hover {
   transform: scale(1.05);
   cursor: pointer;
 }
@@ -274,14 +282,14 @@ ul li a:hover {
   background-color: var(--accent-cyan);
   top: 0;
   bottom: 0;
-  left: 20px; 
+  left: 20px;
   margin-left: -1px;
 }
 
 .timeline-item {
   position: relative;
   margin-bottom: 40px;
-  padding-left: 50px; 
+  padding-left: 50px;
 }
 
 .timeline-dot {
@@ -301,8 +309,8 @@ ul li a:hover {
   background-color: var(--bg-home);
   padding: 20px 30px;
   border-radius: 12px;
-  border-left: 4px solid var(--accent-cyan); 
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  border-left: 4px solid var(--accent-cyan);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
@@ -363,7 +371,7 @@ ul li a:hover {
 .skill-card:hover {
   transform: translateY(-10px);
   border-color: var(--accent-cyan);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .skill-card i {
@@ -382,7 +390,7 @@ ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 100px 0; 
+  padding: 100px 0;
   gap: 50px;
 }
 
@@ -402,7 +410,7 @@ ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%; 
+  height: 100%;
 }
 
 .card:hover {
@@ -454,7 +462,7 @@ ul li a:hover {
   display: flex;
   gap: 15px;
   font-size: 13px;
-  font-family: monospace; 
+  font-family: monospace;
 }
 
 .tech-list li {
@@ -481,7 +489,7 @@ ul li a:hover {
   transition: all 0.3s ease;
 }
 
-.contact-box:hover{
+.contact-box:hover {
   border: 1px solid var(--accent-cyan);
   transition: all 0.3s ease;
   transform: translateY(-3px);
@@ -506,7 +514,8 @@ ul li a:hover {
   flex-wrap: wrap;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
   padding: 12px 30px;
   border-radius: 50px;
   font-weight: 600;
@@ -541,13 +550,18 @@ ul li a:hover {
 
 /* --- TITLES --- */
 
-.about-me-title, .education-title, .skills-title, .projects-title {
+.about-me-title,
+.education-title,
+.skills-title,
+.projects-title {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.education-title, .skills-title, .projects-title {
+.education-title,
+.skills-title,
+.projects-title {
   margin-left: 21px;
 }
 
@@ -555,14 +569,20 @@ ul li a:hover {
   margin-bottom: 20px;
 }
 
-.about-me-title h4, .education-title h4, .skills-title h4, .projects-title h4 {
+.about-me-title h4,
+.education-title h4,
+.skills-title h4,
+.projects-title h4 {
   color: var(--accent-cyan);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.about-me-title h2, .education-title h2, .skills-title h2, .projects-title h2 {
+.about-me-title h2,
+.education-title h2,
+.skills-title h2,
+.projects-title h2 {
   font-size: 2.5rem;
   font-weight: 500;
 }
@@ -603,10 +623,30 @@ ul li a:hover {
   pointer-events: none;
 }
 
+/* --- FOOTER --- */
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: var(--bg-website);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+footer p:hover {
+  color: var(--accent-cyan);
+}
+
 /* --- ICONS --- */
 
 .fa-solid {
- color: black;
+  color: black;
 }
 
 .icon {
@@ -616,8 +656,15 @@ ul li a:hover {
 /* --- KEYFRAMES --- */
 
 @keyframes smoothEntry {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .home-section {
@@ -625,9 +672,17 @@ ul li a:hover {
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(39, 230, 236, 0.7); }
-  70% { box-shadow: 0 0 0 10px rgba(39, 230, 236, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(39, 230, 236, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(39, 230, 236, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(39, 230, 236, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(39, 230, 236, 0);
+  }
 }
 
 .download-cv {
@@ -635,9 +690,22 @@ ul li a:hover {
 }
 
 @keyframes rebound {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-  40% { transform: translateY(-6px); }
-  60% { transform: translateY(-5px); }  
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-6px);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
 }
 
 .anchor i {

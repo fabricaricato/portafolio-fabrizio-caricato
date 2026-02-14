@@ -1,46 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Fabrizio Caricato</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio - Fabrizio Caricato</title>
+  <meta name="description"
+    content="Portafolio de Fabrizio Caricato - Desarrollador Full Stack React & Node.js en Buenos Aires, Argentina">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header>
-    
-    <!-- script to hide the anchors while scrolling -->
-
-    <script>
-      let isScrolling
-
-      window.addEventListener('scroll', () => {
-      const elementos = document.querySelectorAll('.anchor')
-      elementos.forEach(i => i.classList.add('hide'))
-      window.clearTimeout(isScrolling)
-
-      isScrolling = setTimeout(() => {
-        elementos.forEach(el => el.classList.remove('hide'))
-      }, 200)
-      })
-    </script>
-
     <aside>
 
       <!-- NAVIGATION BAR -->
 
       <nav>
         <div class="profile-container">
-          <img src="./assets/foto-retrato.jpg" alt="profile-picture"/>
+          <img src="./assets/foto-retrato.jpg" alt="Foto de perfil de Fabrizio Caricato" />
           <div>
-            <p>Fabrizio Caricato 
-            <br> 
-            <span>Full Stack developer</span></p>
+            <p>Fabrizio Caricato
+              <br>
+              <span>Full Stack developer</span>
+            </p>
           </div>
         </div>
         <ul>
@@ -49,10 +37,10 @@
           <li><a href="#education">Educación</a></li>
           <li><a href="#skills">Habilidades</a></li>
           <li><a href="#projects">Proyectos</a></li>
-          <li><a href="#contact">Contactos</a></li>
+          <li><a href="#footer">Contactos</a></li>
         </ul>
-        <a href="./assets/Fabrizio Caricato Curriculum Vitae 2026.pdf" class="download-cv">
-          Descargar CV 
+        <a href="./assets/fabrizio-caricato-cv-2026.pdf" class="download-cv" download>
+          Descargar CV
         </a>
       </nav>
     </aside>
@@ -69,12 +57,14 @@
         </h1>
         <p>Full Stack React & Node.js</p>
         <div class="links-container">
-          <a href="https://github.com/fabricaricato" class="github-link">GitHub</a>
-          <a href="https://www.linkedin.com/in/fabrizio-caricato-784aa3262/" class="linkedin-link">LinkedIn</a>
+          <a href="https://github.com/fabricaricato" class="github-link" target="_blank"
+            rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/fabrizio-caricato-784aa3262/" class="linkedin-link" target="_blank"
+            rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
       <div class="anchor">
-        <a href="#about-me" >Sobre mí</a>
+        <a href="#about-me">Sobre mí</a>
         <i class="fa-solid fa-chevron-down"></i>
       </div>
     </section>
@@ -88,23 +78,27 @@
           <h2>Fabrizio Caricato</h2>
         </div>
         <div class="general-description">
-          <p>Desarrollador de software en formación, enfocado en aplicaciones web Full Stack con React, TypeScript, Node.js y bases de datos como MySQL y MongoDB.
-          <br>
-          <br>
-          Actualmente curso la Tecnicatura en Desarrollo de Software en la Universidad Argentina de la Empresa (UADE) y realizo una Diplomatura en Desarrollo Web Full Stack en la UTN. Además, cuento con un nivel intermedio de inglés.
-          <br>
-          <br>
-          Resido en la Ciudad Autónoma de Buenos Aires, Argentina, y poseo experiencia previa en soporte técnico e infraestructura IT.
+          <p>Desarrollador de software en formación, enfocado en aplicaciones web Full Stack con React, TypeScript,
+            Node.js y bases de datos como MySQL y MongoDB.
+            <br>
+            <br>
+            Actualmente curso la Tecnicatura en Desarrollo de Software en la Universidad Argentina de la Empresa (UADE)
+            y realizo una Diplomatura en Desarrollo Web Full Stack en la UTN. Además, cuento con un nivel intermedio de
+            inglés.
+            <br>
+            <br>
+            Resido en la Ciudad Autónoma de Buenos Aires, Argentina, y poseo experiencia previa en soporte técnico e
+            infraestructura IT.
           </p>
           <div class="carrousel">
-            <img src="./assets/foto-retrato.jpg" alt="foto-retrato">
+            <img src="./assets/foto-retrato.jpg" alt="Foto de Fabrizio Caricato">
           </div>
         </div>
         <div class="anchor">
-          <a href="#education" >Educación</a>
+          <a href="#education">Educación</a>
           <i class="fa-solid fa-chevron-down"></i>
         </div>
-      </div>    
+      </div>
     </section>
 
     <!-- EDUCATION -->
@@ -121,7 +115,8 @@
             <span class="date">2024 - Presente</span>
             <h3>Tecnicatura en Desarrollo de Software</h3>
             <p class="institution">UADE - Universidad Argentina de la Empresa</p>
-            <p class="description">Formación intensiva en programación, bases de datos, arquitectura de software y metodologías ágiles.</p>
+            <p class="description">Formación intensiva en programación, bases de datos, arquitectura de software y
+              metodologías ágiles.</p>
           </div>
         </div>
         <div class="timeline-item">
@@ -130,12 +125,13 @@
             <span class="date">2025 - En curso</span>
             <h3>Diplomatura en Desarrollo Web Full Stack</h3>
             <p class="institution">UTN - Universidad Tecnológica Nacional</p>
-            <p class="description">Especialización en tecnologías como MongoDB, Express, Node.js, desarrollo nativo (HTML, CSS, JAVASCRIPT) y desarrollo moderno (React).</p>
+            <p class="description">Especialización en tecnologías como MongoDB, Express, Node.js, desarrollo nativo
+              (HTML, CSS, JAVASCRIPT) y desarrollo moderno (React).</p>
           </div>
         </div>
       </div>
       <div class="anchor">
-        <a href="#skills" >Habilidades</a>
+        <a href="#skills">Habilidades</a>
         <i class="fa-solid fa-chevron-down"></i>
       </div>
     </section>
@@ -161,10 +157,13 @@
           <p>JavaScript</p>
         </div>
         <div class="skill-card">
+          <i class="devicon-python-plain colored"></i>
+          <p>Python</p>
+        </div>
+        <div class="skill-card">
           <i class="devicon-react-original colored"></i>
           <p>React</p>
         </div>
-        
         <div class="skill-card">
           <i class="devicon-nodejs-plain colored"></i>
           <p>Node.js</p>
@@ -187,7 +186,7 @@
         </div>
       </div>
       <div class="anchor">
-        <a href="#projects" >Proyectos</a>
+        <a href="#projects">Proyectos</a>
         <i class="fa-solid fa-chevron-down"></i>
       </div>
     </section>
@@ -204,15 +203,17 @@
           <div class="card-header">
             <i class="fa-regular fa-folder-open"></i>
             <div class="card-links">
-              <a href="https://github.com/fabricaricato/tp-final-frontend-fabrizio-caricato.git"><i class="fa-brands fa-github"></i></a>
-              <a href="https://tp-final-frontend-fabrizio-caricato.vercel.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/fabricaricato/tp-final-frontend-fabrizio-caricato.git" target="_blank"
+                rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+              <a href="https://tp-final-frontend-fabrizio-caricato.vercel.app/" target="_blank"
+                rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
           </div>
           <h3>Chat-UI</h3>
           <p>Interfaz moderna de chat en tiempo real diseñada para facilitar la comunicación fluida entre usuarios.</p>
           <ul class="tech-list">
-            <i class="devicon-react-original colored icon"></i>
-            <i class="devicon-git-plain colored icon"></i>
+            <li><i class="devicon-react-original colored icon"></i></li>
+            <li><i class="devicon-git-plain colored icon"></i></li>
           </ul>
         </article>
         <!-- <article class="card">
@@ -235,42 +236,64 @@
           <div class="card-header">
             <i class="fa-regular fa-folder-open"></i>
             <div class="card-links">
-              <a href="https://github.com/fabricaricato/tp-utn-servidor-http-fabrizio-caricato.git"><i class="fa-brands fa-github"></i></a>
-              <a href="https://tp-utn-servidor-http-fabrizio-caric.vercel.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/fabricaricato/tp-utn-servidor-http-fabrizio-caricato.git" target="_blank"
+                rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+              <a href="https://tp-utn-servidor-http-fabrizio-caric.vercel.app/" target="_blank"
+                rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
           </div>
           <h3>API Rest Full</h3>
           <p>Backend robusto con autenticación JWT y manejo de rutas protegidas para usuarios.</p>
           <ul class="tech-list">
-            <i class="devicon-nodejs-plain colored icon"></i>
-            <i class="devicon-javascript-plain colored icon"></i>
-            <i class="devicon-mongodb-plain colored icon"></i>
-            <i class="devicon-git-plain colored icon"></i>
+            <li><i class="devicon-nodejs-plain colored icon"></i></li>
+            <li><i class="devicon-javascript-plain colored icon"></i></li>
+            <li><i class="devicon-mongodb-plain colored icon"></i></li>
+            <li><i class="devicon-git-plain colored icon"></i></li>
           </ul>
         </article>
       </div>
       <div class="anchor">
-        <a href="#contact" >Contacto</a>
+        <a href="#footer">Contacto</a>
         <i class="fa-solid fa-chevron-down"></i>
       </div>
     </section>
 
     <!-- CONTACT SECTION -->
 
-    <section id="contact" class="contacts container-limit">
+    <section class="contacts container-limit">
       <div class="contact-box">
         <h2>Contáctame :)</h2>
         <p>Estoy buscando nuevas oportunidades para aplicar mis conocimientos y seguir creciendo como desarrollador.</p>
         <div class="contact-buttons">
-            <a href="mailto:fabriziocaricato1@gmail.com" class="btn-primary">
-              <i class="fa-solid fa-envelope"></i>Enviar Correo
-            </a>
-            <a href="https://www.linkedin.com/in/fabrizio-caricato-784aa3262/" class="btn-secondary">
-              <i class="fa-brands fa-linkedin"></i> LinkedIn
-            </a>
+          <a href="mailto:fabriziocaricato1@gmail.com" class="btn-primary">
+            <i class="fa-solid fa-envelope"></i>Enviar Correo
+          </a>
+          <a href="https://www.linkedin.com/in/fabrizio-caricato-784aa3262/" class="btn-secondary" target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
         </div>
       </div>
     </section>
   </main>
+
+  <footer id="footer">
+    <p>&copy; 2026 Fabrizio Caricato. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Script for hide anchors while scrolling -->
+  <script>
+    const elementos = document.querySelectorAll('.anchor');
+    let isScrolling;
+
+    window.addEventListener('scroll', () => {
+      elementos.forEach(i => i.classList.add('hide'));
+      window.clearTimeout(isScrolling);
+
+      isScrolling = setTimeout(() => {
+        elementos.forEach(el => el.classList.remove('hide'));
+      }, 200);
+    });
+  </script>
 </body>
 </html>
