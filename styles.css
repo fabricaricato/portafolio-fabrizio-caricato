@@ -343,7 +343,7 @@ ul li a:hover {
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
-  max-width: 320px;
+  max-width: 33.3%;
   border: 2px solid rgba(39, 230, 236, 0.2);
   transition: all 0.4s ease;
 }
