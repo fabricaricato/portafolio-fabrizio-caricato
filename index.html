@@ -129,19 +129,39 @@
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <span class="date">2025 - En curso</span>
+            <span class="date">2025 - 2026</span>
             <h3>Diplomatura en Desarrollo Web Full Stack</h3>
             <p class="institution">UTN - Universidad Tecnológica Nacional</p>
             <p class="description">Especialización en tecnologías como MongoDB, Express, Node.js, desarrollo nativo
               (HTML, CSS, JAVASCRIPT) y desarrollo moderno (React).</p>
-            <div class="certificate-preview"
-              onclick="document.getElementById('certificate-modal').classList.add('active')">
-              <img src="./assets/Curso_de_Programador_Web_Inicial_-_Front_End_Developer_-_Turno_Noche_page-0001.jpg"
-                alt="Certificado Programador Web Inicial - Front End Developer" />
-              <div class="certificate-overlay">
-                <i class="fa-solid fa-expand"></i>
-                <span>Ver certificado</span>
+            <div class="certificates-container">
+              <div class="certificate-preview"
+                onclick="document.getElementById('certificate-modal').classList.add('active')">
+                <img src="./assets/Curso_de_Programador_Web_Inicial_-_Front_End_Developer_-_Turno_Noche_page-0001.jpg"
+                  alt="Certificado Programador Web Inicial - Front End Developer" />
+                <div class="certificate-overlay">
+                  <i class="fa-solid fa-expand"></i>
+                  <span>Ver certificado</span>
+                </div>
               </div>
+              <div class="certificate-preview"
+                onclick="document.getElementById('certificate-modal-backend').classList.add('active')">
+                <img src="./assets/Curso_de_Backend_Developer_-_Turno_Noche_page-0001.jpg"
+                  alt="Certificado Backend Developer" />
+                <div class="certificate-overlay">
+                  <i class="fa-solid fa-expand"></i>
+                  <span>Ver certificado</span>
+                </div>
+              </div>
+              <div class="certificate-preview"
+                onclick="document.getElementById('certificate-modal-fullstack').classList.add('active')">
+                <img src="./assets/Diplomatura_en_Programaci_n_Web_Full_Stack_-_Turno_Noche_page-0001.jpg"
+                  alt="Certificado Diplomatura en Programación Web Full Stack" />
+                <div class="certificate-overlay">
+                  <i class="fa-solid fa-expand"></i>
+                  <span>Ver certificado</span>
+                </div>
+              </div>  
             </div>
           </div>
         </div>
@@ -152,6 +172,22 @@
             onclick="document.getElementById('certificate-modal').classList.remove('active')">&times;</button>
           <img src="./assets/Curso_de_Programador_Web_Inicial_-_Front_End_Developer_-_Turno_Noche_page-0001.jpg"
             alt="Certificado Programador Web Inicial - Front End Developer" />
+        </div>
+      </div>
+      <div id="certificate-modal-backend" class="certificate-modal" onclick="this.classList.remove('active')">
+        <div class="certificate-modal-content" onclick="event.stopPropagation()">
+          <button class="certificate-modal-close"
+            onclick="document.getElementById('certificate-modal-backend').classList.remove('active')">&times;</button>
+          <img src="./assets/Curso_de_Backend_Developer_-_Turno_Noche_page-0001.jpg"
+            alt="Certificado Backend Developer" />
+        </div>
+      </div>
+      <div id="certificate-modal-fullstack" class="certificate-modal" onclick="this.classList.remove('active')">
+        <div class="certificate-modal-content" onclick="event.stopPropagation()">
+          <button class="certificate-modal-close"
+            onclick="document.getElementById('certificate-modal-fullstack').classList.remove('active')">&times;</button>
+          <img src="./assets/Diplomatura_en_Programaci_n_Web_Full_Stack_-_Turno_Noche_page-0001.jpg"
+            alt="Certificado Diplomatura en Programación Web Full Stack" />
         </div>
       </div>
       <div class="anchor">
