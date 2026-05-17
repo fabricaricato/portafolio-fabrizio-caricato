@@ -859,3 +859,327 @@ footer p:hover {
     transform: scale(1);
   }
 }
+
+/* --- HAMBURGER BUTTON (hidden on desktop) --- */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--text-main);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ========================================== */
+/* --- RESPONSIVE: TABLETS (max-width 768px) --- */
+/* ========================================== */
+
+@media (max-width: 768px) {
+
+  /* NAV */
+  nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 12px 20px;
+    gap: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 15px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  .download-cv {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    padding: 12px 25px;
+  }
+
+  .download-cv.active {
+    display: inline-block;
+  }
+
+  /* HOME */
+  .home-section {
+    font-size: 32px;
+    padding: 0 20px;
+  }
+
+  .home-section p {
+    font-size: 18px;
+  }
+
+  .links-container {
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .github-link,
+  .linkedin-link {
+    width: 180px;
+  }
+
+  /* ABOUT ME */
+  .general-description {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .carrousel {
+    order: -1;
+  }
+
+  .carrousel img {
+    width: 200px;
+    height: 200px;
+    bottom: 0;
+  }
+
+  /* SECTION TITLES */
+  .about-me-title h2,
+  .education-title h2,
+  .skills-title h2,
+  .projects-title h2 {
+    font-size: 2rem;
+  }
+
+  .education-title,
+  .skills-title,
+  .projects-title {
+    margin-left: 0;
+  }
+
+  /* CERTIFICATES */
+  .certificates-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .certificate-preview {
+    max-width: 80%;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    max-width: 100%;
+  }
+
+  .timeline-content {
+    padding: 15px 20px;
+  }
+
+  /* SKILLS */
+  .skills {
+    padding: 50px 0 80px 0;
+  }
+
+  .skills-grid {
+    gap: 15px;
+  }
+
+  .skill-card {
+    width: 100px;
+    height: 100px;
+  }
+
+  .skill-card i {
+    font-size: 2.5rem;
+  }
+
+  /* PROJECTS */
+  .projects {
+    padding: 60px 0;
+    gap: 30px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONTACT */
+  .contacts {
+    padding: 60px 0;
+  }
+
+  .contact-box {
+    padding: 35px 25px;
+  }
+
+  .contact-box h2 {
+    font-size: 2rem;
+  }
+
+  .contact-box p {
+    font-size: 1rem;
+  }
+
+  /* ANCHORS */
+  .anchor {
+    bottom: 15px;
+  }
+
+  .anchor a {
+    font-size: 0.8rem;
+  }
+}
+
+/* ========================================== */
+/* --- RESPONSIVE: PHONES (max-width 480px) --- */
+/* ========================================== */
+
+@media (max-width: 480px) {
+
+  .container-limit {
+    width: 92%;
+  }
+
+  /* HOME */
+  .home-section {
+    font-size: 26px;
+    margin-top: 30px;
+  }
+
+  .home-section p {
+    font-size: 16px;
+  }
+
+  .links-container {
+    margin-top: 25px;
+  }
+
+  /* ABOUT ME */
+  .about-me {
+    padding: 40px 10px;
+  }
+
+  .carrousel img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .general-description p {
+    font-size: 0.9rem;
+  }
+
+  /* TITLES */
+  .about-me-title h2,
+  .education-title h2,
+  .skills-title h2,
+  .projects-title h2 {
+    font-size: 1.7rem;
+  }
+
+  /* CERTIFICATES */
+  .certificate-preview {
+    max-width: 100%;
+  }
+
+  /* TIMELINE */
+  .timeline-content h3 {
+    font-size: 1rem;
+  }
+
+  .timeline-content .institution {
+    font-size: 0.85rem;
+  }
+
+  .timeline-content .description {
+    font-size: 0.85rem;
+  }
+
+  /* SKILLS */
+  .skill-card {
+    width: 85px;
+    height: 85px;
+    gap: 6px;
+  }
+
+  .skill-card i {
+    font-size: 2rem;
+  }
+
+  .skill-card p {
+    font-size: 0.75rem;
+  }
+
+  /* PROJECTS */
+  .card {
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  /* CONTACT */
+  .contact-box {
+    padding: 30px 20px;
+  }
+
+  .contact-box h2 {
+    font-size: 1.6rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+}
