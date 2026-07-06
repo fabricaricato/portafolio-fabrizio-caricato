@@ -1,353 +1,424 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Fabrizio Caricato</title>
+  <title>Fabrizio Caricato — Full Stack Developer</title>
+  <meta name="description"
+    content="Portfolio of Fabrizio Caricato — Full Stack React & Node.js Developer based in Buenos Aires, Argentina.">
+  <meta name="author" content="Fabrizio Caricato">
+  <meta name="theme-color" content="#0a0a0b">
+
   <link rel="icon" type="image/svg+xml" href='data:image/svg+xml,
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-    <rect width="100" height="100" rx="20" fill="%23242424" />
-    <text y="50%" x="50%" dominant-baseline="middle" text-anchor="middle" font-size="55" font-family="monospace" font-weight="bold">
-      <tspan fill="%23fc28e09a">{</tspan><tspan fill="%2327e6ec">F</tspan><tspan fill="%23fc28e09a">}</tspan>
+    <rect width="100" height="100" rx="22" fill="%230a0a0b" />
+    <text y="50%" x="50%" dominant-baseline="middle" text-anchor="middle" font-size="55" font-family="monospace" font-weight="700">
+      <tspan fill="%238b7cf6">{</tspan><tspan fill="%23c4f135">F</tspan><tspan fill="%238b7cf6">}</tspan>
     </text>
   </svg>'>
-  <meta name="description"
-    content="Portfolio of Fabrizio Caricato - Full Stack React & Node.js Developer based in Buenos Aires, Argentina">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <header>
-    <aside>
+  <a href="#main" class="skip-link">Skip to content</a>
 
-      <!-- NAVIGATION BAR -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="#home" class="nav-logo" aria-label="Home">
+        <span class="logo-bracket">{</span><span class="logo-letter">F</span><span class="logo-bracket">}</span>
+      </a>
 
-      <nav>
-        <div class="profile-container">
-          <img src="./assets/foto-cv.jpeg" alt="Profile picture of Fabrizio Caricato" />
-          <div>
-            <p>Fabrizio Caricato
-              <br>
-              <span>Full Stack developer</span>
-            </p>
-          </div>
-        </div>
-        <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+      <nav aria-label="Primary">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme">
+          <span class="theme-toggle-track">
+            <span class="theme-toggle-thumb">
+              <i class="fa-solid fa-moon" aria-hidden="true"></i>
+            </span>
+          </span>
+        </button>
+
+        <a href="./assets/CV-Fabrizio-Caricato-2026.pdf" class="btn btn-primary btn-cv" download>
+          <i class="fa-solid fa-download" aria-hidden="true"></i>
+          <span>Download CV</span>
+        </a>
+
+        <button class="hamburger" id="hamburger-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <ul id="nav-menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about-me">About Me</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#footer">Contact</a></li>
-        </ul>
-        <a href="./assets/CV-Fabrizio-Caricato-2026.pdf" class="download-cv" download>
-          Download CV
-        </a>
-      </nav>
-    </aside>
+      </div>
+    </div>
   </header>
 
-  <!-- MAIN -->
+  <main id="main">
 
-  <main>
-    <section class="home" id="home">
-      <div id="home-section" class="home-section">
-        <h1><span class="name">Fabrizio Caricato</span>
-          <br>
-          <span class="clasp">{</span> Web Developer <span class="clasp">}</span>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <p class="hero-eyebrow reveal">
+          <span class="dot" aria-hidden="true"></span>
+          Available for new opportunities
+        </p>
+
+        <h1 id="hero-title" class="hero-title reveal">
+          <span class="hero-greeting">Hi, I'm</span>
+          <span class="hero-name">Fabrizio Caricato</span>
         </h1>
-        <p>Full Stack React & Node.js</p>
-        <div class="links-container">
-          <a href="https://github.com/fabricaricato" class="github-link" target="_blank"
-            rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/fabrizio-caricato-784aa3262/" class="linkedin-link" target="_blank"
-            rel="noopener noreferrer">LinkedIn</a>
-        </div>
-      </div>
-      <div class="anchor">
-        <a href="#about-me">About Me</a>
-        <i class="fa-solid fa-chevron-down"></i>
-      </div>
-    </section>
 
-    <!-- ABOUT ME -->
+        <div class="hero-role reveal">
+          <span class="hero-role-prefix">&gt;</span>
+          <span class="typewriter" id="typewriter" aria-live="polite">Full Stack Developer</span>
+          <span class="typewriter-cursor" aria-hidden="true"></span>
+        </div>
 
-    <section class="about-me container-limit" id="about-me">
-      <div class="personal-presentation">
-        <div class="about-me-title">
-          <h4>About Me</h4>
-          <h2>Fabrizio Caricato</h2>
-        </div>
-        <div class="general-description">
-          <p>Software developer in training, focused on Full Stack web applications with React, TypeScript,
-            Node.js, and databases such as MySQL and MongoDB.
-            <br>
-            <br>
-            I am currently studying an Associate Degree in Software Development at the Universidad Argentina de la Empresa (UADE)
-            and pursuing a Diploma in Full Stack Web Development at UTN. In addition, I have an intermediate level of
-            English.
-            <br>
-            <br>
-            I am based in the Autonomous City of Buenos Aires, Argentina, and have previous experience in technical support and
-            IT infrastructure.
-          </p>
-          <div class="carrousel">
-            <img src="./assets/foto-cv.jpeg" alt="Photo of Fabrizio Caricato">
-          </div>
-        </div>
-        <div class="anchor">
-          <a href="#education">Education</a>
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-      </div>
-    </section>
+        <p class="hero-description reveal">
+          Software developer in training, focused on building full stack web applications
+          with React, TypeScript, Node.js, and modern databases. Based in Buenos Aires, Argentina.
+        </p>
 
-    <!-- EDUCATION -->
-
-    <section id="education" class="education container-limit">
-      <div class="education-title">
-        <h4>Academic Background</h4>
-        <h2>Education</h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="date">2024 - In progress</span>
-            <h3>Associate Degree in Software Development</h3>
-            <p class="institution">UADE - Universidad Argentina de la Empresa</p>
-            <p class="description">Intensive training in programming, databases, software architecture, and
-              agile methodologies.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="date">2025 - 2026</span>
-            <h3>Diploma in Full Stack Web Development</h3>
-            <p class="institution">UTN - Universidad Tecnológica Nacional</p>
-            <p class="description">Specialization in technologies such as MongoDB, Express, Node.js, native development
-              (HTML, CSS, JAVASCRIPT) and modern development (React).</p>
-            <div class="certificates-container">
-              <div class="certificate-preview"
-                onclick="document.getElementById('certificate-modal').classList.add('active')">
-                <img src="./assets/Curso_de_Programador_Web_Inicial_-_Front_End_Developer_-_Turno_Noche_page-0001.jpg"
-                  alt="Initial Web Developer Certificate - Front End Developer" />
-                <div class="certificate-overlay">
-                  <i class="fa-solid fa-expand"></i>
-                  <span>View certificate</span>
-                </div>
-              </div>
-              <div class="certificate-preview"
-                onclick="document.getElementById('certificate-modal-backend').classList.add('active')">
-                <img src="./assets/Curso_de_Backend_Developer_-_Turno_Noche_page-0001.jpg"
-                  alt="Backend Developer Certificate" />
-                <div class="certificate-overlay">
-                  <i class="fa-solid fa-expand"></i>
-                  <span>View certificate</span>
-                </div>
-              </div>
-              <div class="certificate-preview"
-                onclick="document.getElementById('certificate-modal-fullstack').classList.add('active')">
-                <img src="./assets/Diplomatura_en_Programaci_n_Web_Full_Stack_-_Turno_Noche_page-0001.jpg"
-                  alt="Full Stack Web Development Diploma Certificate" />
-                <div class="certificate-overlay">
-                  <i class="fa-solid fa-expand"></i>
-                  <span>View certificate</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="certificate-modal" class="certificate-modal" onclick="this.classList.remove('active')">
-        <div class="certificate-modal-content" onclick="event.stopPropagation()">
-          <button class="certificate-modal-close"
-            onclick="document.getElementById('certificate-modal').classList.remove('active')">&times;</button>
-          <img src="./assets/Curso_de_Programador_Web_Inicial_-_Front_End_Developer_-_Turno_Noche_page-0001.jpg"
-            alt="Initial Web Developer Certificate - Front End Developer" />
-        </div>
-      </div>
-      <div id="certificate-modal-backend" class="certificate-modal" onclick="this.classList.remove('active')">
-        <div class="certificate-modal-content" onclick="event.stopPropagation()">
-          <button class="certificate-modal-close"
-            onclick="document.getElementById('certificate-modal-backend').classList.remove('active')">&times;</button>
-          <img src="./assets/Curso_de_Backend_Developer_-_Turno_Noche_page-0001.jpg"
-            alt="Backend Developer Certificate" />
-        </div>
-      </div>
-      <div id="certificate-modal-fullstack" class="certificate-modal" onclick="this.classList.remove('active')">
-        <div class="certificate-modal-content" onclick="event.stopPropagation()">
-          <button class="certificate-modal-close"
-            onclick="document.getElementById('certificate-modal-fullstack').classList.remove('active')">&times;</button>
-          <img src="./assets/Diplomatura_en_Programaci_n_Web_Full_Stack_-_Turno_Noche_page-0001.jpg"
-            alt="Full Stack Web Development Diploma Certificate" />
-        </div>
-      </div>
-      <div class="anchor">
-        <a href="#skills">Skills</a>
-        <i class="fa-solid fa-chevron-down"></i>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-
-    <section id="skills" class="skills container-limit">
-      <div class="skills-title">
-        <h4>Tech Stack</h4>
-        <h2>Skills</h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <i class="devicon-html5-plain colored"></i>
-          <p>HTML5</p>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-css3-plain colored"></i>
-          <p>CSS3</p>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-javascript-plain colored"></i>
-          <p>JavaScript</p>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-python-plain colored"></i>
-          <p>Python</p>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-react-original colored"></i>
-          <p>React</p>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-nodejs-plain colored"></i>
-          <p>Node.js</p>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-typescript-plain colored"></i>
-          <p>TypeScript</p>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-mysql-original colored"></i>
-          <p>MySQL</p>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-mongodb-plain colored"></i>
-          <p>MongoDB</p>
-        </div>
-        <div class="skill-card">
-          <i class="devicon-git-plain colored"></i>
-          <p>Git</p>
-        </div>
-      </div>
-      <div class="anchor">
-        <a href="#projects">Projects</a>
-        <i class="fa-solid fa-chevron-down"></i>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-
-    <section id="projects" class="projects container-limit">
-      <div class="projects-title">
-        <h4>Portfolio</h4>
-        <h2>Featured Projects</h2>
-      </div>
-      <div class="projects-grid">
-        <article class="card">
-          <div class="card-header">
-            <i class="fa-regular fa-folder-open"></i>
-            <div class="card-links">
-              <a href="https://github.com/fabricaricato/tp-final-frontend-fabrizio-caricato.git" target="_blank"
-                rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-              <a href="https://tp-final-frontend-fabrizio-caricato.vercel.app/" target="_blank"
-                rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-          <h3>Chat-UI</h3>
-          <p>Modern real-time chat interface designed to enable seamless communication between users.</p>
-          <ul class="tech-list">
-            <li><i class="devicon-react-original colored icon"></i></li>
-            <li><i class="devicon-git-plain colored icon"></i></li>
-          </ul>
-        </article>
-        <!-- <article class="card">
-          <div class="card-header">
-            <i class="fa-regular fa-folder-open"></i>
-            <div class="card-links">
-              <a href="#"><i class="fa-brands fa-github"></i></a>
-              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-          <h3>Cartelería Digital</h3>
-          <p>Sistema de gestión de precios para comercios locales, permitiendo actualizaciones dinámicas.</p>
-          <ul class="tech-list">
-            <li>Tecnologia 1</li>
-            <li>Tecnologia 2</li>
-            <li>Tecnologia 3</li>
-          </ul>
-        </article> -->
-        <article class="card">
-          <div class="card-header">
-            <i class="fa-regular fa-folder-open"></i>
-            <div class="card-links">
-              <a href="https://github.com/fabricaricato/book-management-api.git" target="_blank"
-                rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-              <a href="https://book-management-api-black.vercel.app/" target="_blank" rel="noopener noreferrer"><i
-                  class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-          <h3>Book Management API</h3>
-          <p>RESTful API for book management, with JWT authentication and handling of protected routes for users.
-          </p>
-          <ul class="tech-list">
-            <li><i class="devicon-nodejs-plain colored icon"></i></li>
-            <li><i class="devicon-typescript-plain colored icon"></i></li>
-            <li><i class="devicon-mongodb-plain colored icon"></i></li>
-            <li><i class="devicon-git-plain colored icon"></i></li>
-          </ul>
-        </article>
-      </div>
-      <div class="anchor">
-        <a href="#footer">Contact</a>
-        <i class="fa-solid fa-chevron-down"></i>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-
-    <section class="contacts container-limit">
-      <div class="contact-box">
-        <h2>Get in touch :)</h2>
-        <p>I am looking for new opportunities to apply my knowledge and keep growing as a developer.</p>
-        <div class="contact-buttons">
-          <a href="mailto:fabriziocaricato1@gmail.com" class="btn-primary">
-            <i class="fa-solid fa-envelope"></i>Send Email
+        <div class="hero-cta reveal">
+          <a href="#projects" class="btn btn-primary">
+            View projects
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </a>
-          <a href="https://www.linkedin.com/in/fabrizio-caricato-784aa3262/" class="btn-secondary" target="_blank"
-            rel="noopener noreferrer">
-            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          <a href="#contact" class="btn btn-secondary">Get in touch</a>
+        </div>
+
+        <div class="hero-socials reveal">
+          <a href="https://github.com/fabricaricato" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <span>github</span>
+          </a>
+          <a href="https://www.linkedin.com/in/fabrizio-caricato-784aa3262/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            <span>linkedin</span>
           </a>
         </div>
       </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+        <span class="mono small">scroll</span>
+        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+      </a>
     </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-label mono">// 01 — About</p>
+          <h2 id="about-title" class="section-title">A bit about me</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-photo reveal">
+            <img src="./assets/foto-cv.jpeg" alt="Portrait of Fabrizio Caricato">
+          </div>
+
+          <div class="about-text reveal">
+            <p>
+              I'm a software developer in training, focused on full stack web applications with
+              React, TypeScript, Node.js, and databases such as MySQL and MongoDB.
+            </p>
+            <p>
+              Currently studying an Associate Degree in Software Development at UADE
+              (Universidad Argentina de la Empresa) and a Diploma in Full Stack Web Development
+              at UTN. I have an intermediate level of English, and I bring previous experience
+              in technical support and IT infrastructure.
+            </p>
+            <p>
+              I'm based in Buenos Aires, Argentina, and I'm actively looking for opportunities
+              to grow as a developer and contribute to real-world products.
+            </p>
+          </div>
+        </div>
+
+        <ul class="stat-row reveal" role="list">
+          <li class="stat-card">
+            <span class="stat-label mono">Location</span>
+            <span class="stat-value">Buenos Aires, AR</span>
+          </li>
+          <li class="stat-card">
+            <span class="stat-label mono">Languages</span>
+            <span class="stat-value">ES · EN (B2)</span>
+          </li>
+          <li class="stat-card">
+            <span class="stat-label mono">Currently</span>
+            <span class="stat-value">UADE + UTN</span>
+          </li>
+          <li class="stat-card">
+            <span class="stat-label mono">Focus</span>
+            <span class="stat-value">Full Stack</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="education" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-label mono">// 02 — Education</p>
+          <h2 id="education-title" class="section-title">Academic background</h2>
+        </header>
+
+        <ol class="timeline" role="list">
+          <li class="timeline-item reveal">
+            <span class="timeline-year mono">2024 — 2026</span>
+            <div class="timeline-content">
+              <h3>Associate Degree in Software Development</h3>
+              <p class="timeline-institution">UADE — Universidad Argentina de la Empresa</p>
+              <p class="timeline-description">
+                Intensive training in programming, databases, software architecture,
+                and agile methodologies.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal">
+            <span class="timeline-year mono">2025 — 2026</span>
+            <div class="timeline-content">
+              <h3>Diploma in Full Stack Web Development</h3>
+              <p class="timeline-institution">UTN — Universidad Tecnológica Nacional</p>
+              <p class="timeline-description">
+                Specialization in MongoDB, Express, Node.js, native web development
+                (HTML, CSS, JavaScript) and modern development with React.
+              </p>
+              <button type="button" class="btn btn-ghost" data-open-certificates>
+                <i class="fa-regular fa-images" aria-hidden="true"></i>
+                View certificates (3)
+              </button>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="skills" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-label mono">// 03 — Tech Stack</p>
+          <h2 id="skills-title" class="section-title">Tools I work with</h2>
+        </header>
+
+        <ul class="skills-grid" role="list">
+          <li class="skill-card reveal">
+            <i class="devicon-html5-plain colored" aria-hidden="true"></i>
+            <span class="skill-name">HTML5</span>
+            <span class="skill-bar"><span class="skill-bar-fill" style="--level: 95%"></span></span>
+          </li>
+          <li class="skill-card reveal">
+            <i class="devicon-css3-plain colored" aria-hidden="true"></i>
+            <span class="skill-name">CSS3</span>
+            <span class="skill-bar"><span class="skill-bar-fill" style="--level: 90%"></span></span>
+          </li>
+          <li class="skill-card reveal">
+            <i class="devicon-javascript-plain colored" aria-hidden="true"></i>
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-bar"><span class="skill-bar-fill" style="--level: 88%"></span></span>
+          </li>
+          <li class="skill-card reveal">
+            <i class="devicon-typescript-plain colored" aria-hidden="true"></i>
+            <span class="skill-name">TypeScript</span>
+            <span class="skill-bar"><span class="skill-bar-fill" style="--level: 80%"></span></span>
+          </li>
+          <li class="skill-card reveal">
+            <i class="devicon-react-original colored" aria-hidden="true"></i>
+            <span class="skill-name">React</span>
+            <span class="skill-bar"><span class="skill-bar-fill" style="--level: 85%"></span></span>
+          </li>
+          <li class="skill-card reveal">
+            <i class="devicon-nodejs-plain colored" aria-hidden="true"></i>
+            <span class="skill-name">Node.js</span>
+            <span class="skill-bar"><span class="skill-bar-fill" style="--level: 85%"></span></span>
+          </li>
+          <li class="skill-card reveal">
+            <i class="devicon-python-plain colored" aria-hidden="true"></i>
+            <span class="skill-name">Python</span>
+            <span class="skill-bar"><span class="skill-bar-fill" style="--level: 65%"></span></span>
+          </li>
+          <li class="skill-card reveal">
+            <i class="devicon-mysql-original colored" aria-hidden="true"></i>
+            <span class="skill-name">MySQL</span>
+            <span class="skill-bar"><span class="skill-bar-fill" style="--level: 75%"></span></span>
+          </li>
+          <li class="skill-card reveal">
+            <i class="devicon-mongodb-plain colored" aria-hidden="true"></i>
+            <span class="skill-name">MongoDB</span>
+            <span class="skill-bar"><span class="skill-bar-fill" style="--level: 78%"></span></span>
+          </li>
+          <li class="skill-card reveal">
+            <i class="devicon-git-plain colored" aria-hidden="true"></i>
+            <span class="skill-name">Git</span>
+            <span class="skill-bar"><span class="skill-bar-fill" style="--level: 85%"></span></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="projects" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-label mono">// 04 — Projects</p>
+          <h2 id="projects-title" class="section-title">Selected work</h2>
+        </header>
+
+        <div class="projects-grid">
+
+          <article class="project-card reveal">
+            <div class="project-head">
+              <i class="fa-regular fa-folder-open" aria-hidden="true"></i>
+              <div class="project-links">
+                <a href="https://github.com/fabricaricato/tp-final-frontend-fabrizio-caricato.git" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://tp-final-frontend-fabrizio-caricato.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Chat-UI</h3>
+            <p class="project-description">
+              Modern real-time chat interface designed to enable seamless communication between users.
+            </p>
+            <ul class="project-tech mono" role="list">
+              <li>React</li>
+              <li>JavaScript</li>
+              <li>CSS</li>
+            </ul>
+            <span class="project-arrow" aria-hidden="true">
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-head">
+              <i class="fa-regular fa-folder-open" aria-hidden="true"></i>
+              <div class="project-links">
+                <a href="https://github.com/fabricaricato/book-management-api.git" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://book-management-api-black.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Live demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Book Management API</h3>
+            <p class="project-description">
+              RESTful API for book management, with JWT authentication and handling
+              of protected routes for users.
+            </p>
+            <ul class="project-tech mono" role="list">
+              <li>Node.js</li>
+              <li>TypeScript</li>
+              <li>MongoDB</li>
+              <li>Express</li>
+            </ul>
+            <span class="project-arrow" aria-hidden="true">
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-inner">
+        <p class="section-label mono reveal">// 05 — Contact</p>
+        <h2 id="contact-title" class="contact-title reveal">Let's build something together.</h2>
+        <p class="contact-description reveal">
+          I'm currently looking for new opportunities to apply my knowledge
+          and keep growing as a developer. Whether you have a question, a project
+          idea, or just want to say hi — my inbox is open.
+        </p>
+
+        <div class="contact-actions reveal">
+          <a href="mailto:fabriziocaricato1@gmail.com" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            Send email
+          </a>
+          <a href="https://www.linkedin.com/in/fabrizio-caricato-784aa3262/" class="btn btn-secondary btn-lg" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            LinkedIn
+          </a>
+          <a href="https://github.com/fabricaricato" class="btn btn-secondary btn-lg" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer id="footer">
-    <p>&copy; 2026 Fabrizio Caricato. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="mono small">
+        <span class="logo-bracket">{</span><span class="logo-letter">F</span><span class="logo-bracket">}</span>
+        &nbsp;© <span id="footer-year">2026</span> Fabrizio Caricato
+      </p>
+      <p class="mono small footer-built">Built with HTML, CSS & JS — no frameworks.</p>
+    </div>
   </footer>
+
+  <div class="modal" id="certificates-modal" role="dialog" aria-modal="true" aria-labelledby="certificates-title" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-window">
+      <header class="modal-head">
+        <h3 id="certificates-title" class="modal-title">Certificates</h3>
+        <button type="button" class="modal-close" data-close-modal aria-label="Close certificates modal">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <div class="modal-tabs" role="tablist">
+        <button type="button" class="modal-tab is-active" role="tab" aria-selected="true" data-tab="0">
+          Front End
+        </button>
+        <button type="button" class="modal-tab" role="tab" aria-selected="false" data-tab="1">
+          Backend
+        </button>
+        <button type="button" class="modal-tab" role="tab" aria-selected="false" data-tab="2">
+          Full Stack Diploma
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <figure class="cert-figure is-active" data-cert="0">
+          <img src="./assets/Curso_de_Programador_Web_Inicial_-_Front_End_Developer_-_Turno_Noche_page-0001.jpg"
+               alt="Initial Web Developer Certificate — Front End Developer">
+        </figure>
+        <figure class="cert-figure" data-cert="1" hidden>
+          <img src="./assets/Curso_de_Backend_Developer_-_Turno_Noche_page-0001.jpg"
+               alt="Backend Developer Certificate">
+        </figure>
+        <figure class="cert-figure" data-cert="2" hidden>
+          <img src="./assets/Diplomatura_en_Programaci_n_Web_Full_Stack_-_Turno_Noche_page-0001.jpg"
+               alt="Full Stack Web Development Diploma Certificate">
+        </figure>
+      </div>
+    </div>
+  </div>
 
   <script src="./script.js"></script>
 </body>
-
 </html>
